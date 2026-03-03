@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>うっちゃり — AIアニメーション制作 技術開発</title>
   <meta name="description" content="AI地域IP創造モデル「うっちゃり」プロジェクトの技術開発ページ。北海道福島町から始まる、新しい地域のレシピ。">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kurenaido&family=Klee+One:wght@400;600&family=Reggae+One&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kurenaido&family=Klee+One:wght@400;600&family=Reggae+One&display=swap" rel="stylesheet">
   <style>
     /* ===== リセット ===== */
     *,
@@ -193,15 +190,8 @@
     }
 
     @keyframes hint-bounce {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(8px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
     }
 
     /* ===== セクション共通 ===== */
@@ -287,13 +277,8 @@
       border-bottom: 1px dashed var(--chalk-ghost);
     }
 
-    .comp-card.old h3 {
-      color: var(--chalk-faded);
-    }
-
-    .comp-card.new h3 {
-      color: var(--accent-yellow);
-    }
+    .comp-card.old h3 { color: var(--chalk-faded); }
+    .comp-card.new h3 { color: var(--accent-yellow); }
 
     .comp-card ul {
       list-style: none;
@@ -305,15 +290,8 @@
       color: var(--chalk-white-soft);
     }
 
-    .comp-card.old li::before {
-      content: '✕ ';
-      color: var(--accent-red);
-    }
-
-    .comp-card.new li::before {
-      content: '✓ ';
-      color: var(--accent-green);
-    }
+    .comp-card.old li::before { content: '✕ '; color: var(--accent-red); }
+    .comp-card.new li::before { content: '✓ '; color: var(--accent-green); }
 
     .comp-arrow {
       font-family: 'Reggae One', cursive;
@@ -439,8 +417,7 @@
       border-collapse: collapse;
     }
 
-    .chalk-table th,
-    .chalk-table td {
+    .chalk-table th, .chalk-table td {
       padding: 0.8rem 1.2rem;
       text-align: left;
       border-bottom: 1px dashed var(--chalk-ghost);
@@ -466,15 +443,8 @@
       font-size: 0.75rem;
     }
 
-    .badge-wip {
-      border: 1px dashed var(--accent-yellow);
-      color: var(--accent-yellow);
-    }
-
-    .badge-done {
-      border: 1px solid var(--accent-green);
-      color: var(--accent-green);
-    }
+    .badge-wip { border: 1px dashed var(--accent-yellow); color: var(--accent-yellow); }
+    .badge-done { border: 1px solid var(--accent-green); color: var(--accent-green); }
 
     /* ===== ロードマップ ===== */
     .roadmap {
@@ -491,10 +461,11 @@
       height: 100%;
       width: 2px;
       background: repeating-linear-gradient(to bottom,
-          var(--chalk-faded) 0px,
-          var(--chalk-faded) 6px,
-          transparent 6px,
-          transparent 12px);
+        var(--chalk-faded) 0px,
+        var(--chalk-faded) 6px,
+        transparent 6px,
+        transparent 12px
+      );
     }
 
     .rm-item {
@@ -535,13 +506,8 @@
       margin-bottom: 0.2rem;
     }
 
-    .rm-item.active h4 {
-      color: var(--accent-red);
-    }
-
-    .rm-item.future h4 {
-      color: var(--chalk-white-soft);
-    }
+    .rm-item.active h4 { color: var(--accent-red); }
+    .rm-item.future h4 { color: var(--chalk-white-soft); }
 
     .rm-item p {
       font-size: 0.85rem;
@@ -684,22 +650,10 @@
 
     /* ===== レスポンシブ ===== */
     @media (max-width: 768px) {
-      .comparison-wrap {
-        grid-template-columns: 1fr;
-      }
-
-      .comp-arrow {
-        transform: rotate(90deg);
-        font-size: 1.5rem;
-      }
-
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-stats-row {
-        gap: 1.5rem;
-      }
+      .comparison-wrap { grid-template-columns: 1fr; }
+      .comp-arrow { transform: rotate(90deg); font-size: 1.5rem; }
+      .hero h1 { font-size: 2.5rem; }
+      .hero-stats-row { gap: 1.5rem; }
     }
 
     /* ===== ナビバー ===== */
@@ -753,7 +707,6 @@
     }
   </style>
 </head>
-
 <body>
 
   <nav class="site-nav">
@@ -975,7 +928,7 @@
         <div class="rm-item future">
           <div class="rm-dot future">P3</div>
           <h4>モデル化（Modeling）</h4>
-          <p>成功体験のパッケージ化 — 制作手法의 ドキュメント化</p>
+          <p>成功体験のパッケージ化 — 制作手法のドキュメント化</p>
         </div>
         <div class="rm-item future">
           <div class="rm-dot future">P4</div>
@@ -1019,14 +972,9 @@
     <p>AI地域IP創造モデル：文明プロトタイプ</p>
     <p style="margin-top: 0.5rem;">北海道福島町から始まる、新しい地域のレシピ。</p>
     <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-      <a href="https://bestman4649.github.io/ucchari-portal/"
-        style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🏠 ポータル</a>
-      <a href="https://bestman4649.github.io/ucchari-crowdfunding/"
-        style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🔥
-        クラファン</a>
-      <a href="https://bestman4649.github.io/ucchari-fukushima-collab/"
-        style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🤝
-        福島町連携</a>
+      <a href="https://bestman4649.github.io/ucchari-portal/" style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🏠 ポータル</a>
+      <a href="https://bestman4649.github.io/ucchari-crowdfunding/" style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🔥 クラファン</a>
+      <a href="https://bestman4649.github.io/ucchari-fukushima-collab/" style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🤝 福島町連携</a>
     </div>
     <div class="deco-stars" style="margin-top: 1rem;">✦ ✦ ✦</div>
   </footer>
@@ -1040,7 +988,5 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
   </script>
-
 </body>
-
   </html>
