@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja"><head>
+<html lang="ja">
+
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>うっちゃり — AIアニメーション制作 技術開発</title>
   <meta name="description" content="AI地域IP創造モデル「うっちゃり」プロジェクトの技術開発ページ。北海道福島町から始まる、新しい地域のレシピ。">
-  <link href="https://fonts.googleapis.com/css2?family=Yomogi&amp;family=Zen+Kurenaido&amp;family=Klee+One:wght@400;600&amp;family=Reggae+One&amp;display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Yomogi&family=Zen+Kurenaido&family=Klee+One:wght@400;600&family=Reggae+One&display=swap"
+    rel="stylesheet">
   <style>
     /* ===== リセット ===== */
     *,
@@ -697,9 +701,69 @@
         gap: 1.5rem;
       }
     }
+
+    /* ===== ナビバー ===== */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(38, 62, 62, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--chalk-ghost);
+      padding: 0.5rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .site-nav a {
+      color: var(--chalk-faded);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-family: 'Klee One', cursive;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+
+    .site-nav a:hover {
+      color: var(--chalk-white);
+      background: var(--chalk-ghost);
+    }
+
+    .site-nav a.active {
+      color: var(--accent-red);
+      border-bottom: 2px solid var(--accent-red);
+    }
+
+    .site-nav .nav-brand {
+      font-family: 'Reggae One', cursive;
+      font-size: 0.85rem;
+      color: var(--chalk-white-soft);
+      margin-right: 1rem;
+    }
+
+    body {
+      padding-top: 2.5rem;
+    }
   </style>
 </head>
-<body class="">
+
+<body>
+
+  <nav class="site-nav">
+    <a href="https://bestman4649.github.io/ucchari-portal/" class="nav-brand">🏠 うっちゃり</a>
+    <a href="https://bestman4649.github.io/ucchari-tech-dev/" class="active">🤖 AI技術開発</a>
+    <a href="https://bestman4649.github.io/ucchari-crowdfunding/">🔥 クラファン</a>
+    <a href="https://bestman4649.github.io/ucchari-fukushima-collab/">🤝 福島町連携</a>
+  </nav>
+
+  <!-- ===== ヒーロー ===== -->
   <section class="hero">
     <div class="hero-deco-top">✦ ✦ ✦ ✦ ✦</div>
     <h1>うっちゃり</h1>
@@ -726,15 +790,18 @@
     </div>
 
     <div class="hero-deco-bottom">✦ ✦ ✦ ✦ ✦</div>
+
     <div class="scroll-hint">↓ スクロールして詳細を見る ↓</div>
   </section>
 
+  <!-- ===== 構造改革 ===== -->
   <section class="section">
-    <div class="section-inner fade-up visible">
+    <div class="section-inner fade-up">
       <div class="chalk-divider">─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
       <span class="section-tag">🔑 核心コンセプト</span>
       <h2>従来モデル → うっちゃりモデル</h2>
       <p class="section-desc">高コスト・多人数の従来制作から、少人数＋AIによる持続可能なモデルへ。</p>
+
       <div class="comparison-wrap">
         <div class="comp-card old">
           <h3>従来モデル</h3>
@@ -745,7 +812,9 @@
             <li>資金枯渇リスク</li>
           </ul>
         </div>
-        <div class="comp-arrow">構造<br>改革<br>→</div>
+        <div class="comp-arrow">
+          構造<br>改革<br>→
+        </div>
         <div class="comp-card new">
           <h3>うっちゃりモデル</h3>
           <ul>
@@ -759,68 +828,219 @@
     </div>
   </section>
 
+  <!-- ===== 目標 ===== -->
   <section class="section">
-    <div class="section-inner fade-up visible">
+    <div class="section-inner fade-up">
       <div class="chalk-divider">─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
       <span class="section-tag">🎯 ゴール</span>
       <h2>AI制作技術の目標</h2>
+      <p class="section-desc">誰でも作れる、持続可能な地域発信の形。</p>
+
       <div class="goals-row">
         <div class="goal-box">
           <div class="goal-num">50%↑</div>
-          <div class="goal-txt">タスク効率向上</div>
+          <div class="goal-txt">タスク効率向上<br>（再現性の証明）</div>
         </div>
         <div class="goal-box">
           <div class="goal-num">1/3</div>
-          <div class="goal-txt">制作費大幅圧縮</div>
+          <div class="goal-txt">制作費を従来比で<br>大幅圧縮</div>
         </div>
         <div class="goal-box">
           <div class="goal-num">∞</div>
-          <div class="goal-txt">持続可能な地域発信</div>
+          <div class="goal-txt">持続可能な<br>地域発信の形</div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== 技術領域 ===== -->
   <section class="section">
-    <div class="section-inner fade-up visible">
+    <div class="section-inner fade-up">
       <div class="chalk-divider">─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
       <span class="section-tag">⚡ 技術領域</span>
       <h2>4つの開発領域</h2>
+      <p class="section-desc">AI技術を活用した制作パイプラインを構築する。</p>
+
       <div class="tech-grid">
-        <div class="tech-card"><h3>映像生成（AI活用）</h3><ul><li>AI画像・動画生成</li><li>ワークフロー確立</li></ul></div>
-        <div class="tech-card"><h3>制作パイプライン</h3><ul><li>自動化・効率化</li><li>パイロット版制作</li></ul></div>
-        <div class="tech-card"><h3>音声・音楽</h3><ul><li>合成・生成・自動化</li></ul></div>
-        <div class="tech-card"><h3>脚本・ストーリー</h3><ul><li>構成・ダイアログ</li></ul></div>
+        <div class="tech-card">
+          <div class="tech-icon">🎨</div>
+          <h3>映像生成（AI活用）</h3>
+          <ul>
+            <li>AI画像生成（キャラクター、背景美術）</li>
+            <li>AI動画生成（モーション、シーン）</li>
+            <li>スタイル変換・統一技術</li>
+            <li>AI制作ワークフローの確立</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🎬</div>
+          <h3>アニメーション制作パイプライン</h3>
+          <ul>
+            <li>絵コンテ → 原画 → 動画の自動化</li>
+            <li>CRT（カット表）制作の効率化</li>
+            <li>カット割り・レイアウト生成</li>
+            <li>エフェクト・ポストプロセス</li>
+            <li>5分パイロット版の制作</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🔊</div>
+          <h3>音声・音楽</h3>
+          <ul>
+            <li>AI音声合成（ナレーション、CV）</li>
+            <li>BGM・効果音生成</li>
+            <li>リップシンク自動化</li>
+          </ul>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">📝</div>
+          <h3>脚本・ストーリー</h3>
+          <ul>
+            <li>プロット・シナリオ生成</li>
+            <li>ダイアログ作成</li>
+            <li>世界観設定の構築</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== 使用ツール ===== -->
   <section class="section">
-    <div class="section-inner fade-up visible">
+    <div class="section-inner fade-up">
+      <div class="chalk-divider">─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
+      <span class="section-tag">🛠️ ツール</span>
+      <h2>使用ツール・技術</h2>
+
+      <div class="chalk-table-wrap">
+        <table class="chalk-table">
+          <thead>
+            <tr>
+              <th>カテゴリ</th>
+              <th>ツール / 技術</th>
+              <th>状態</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>画像生成</td>
+              <td>（検証中）</td>
+              <td><span class="badge badge-wip">検証中</span></td>
+            </tr>
+            <tr>
+              <td>動画生成</td>
+              <td>（検証中）</td>
+              <td><span class="badge badge-wip">検証中</span></td>
+            </tr>
+            <tr>
+              <td>音声合成</td>
+              <td>（検証中）</td>
+              <td><span class="badge badge-wip">検証中</span></td>
+            </tr>
+            <tr>
+              <td>編集</td>
+              <td>（検証中）</td>
+              <td><span class="badge badge-wip">検証中</span></td>
+            </tr>
+            <tr>
+              <td>プロジェクト管理</td>
+              <td>Antigravity</td>
+              <td><span class="badge badge-done">✅ 導入済</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ロードマップ ===== -->
+  <section class="section">
+    <div class="section-inner fade-up">
       <div class="chalk-divider">─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
       <span class="section-tag">🗺️ ロードマップ</span>
       <h2>文明実装ロードマップ</h2>
+      <p class="section-desc">P1: 証明 → P2: 社会実装 → P3: モデル化 → P4: 波及展開</p>
+
       <div class="roadmap">
-        <div class="rm-item active"><div class="rm-dot active">P1</div><h4>証明（Proof）</h4></div>
-        <div class="rm-item future"><div class="rm-dot future">P2</div><h4>社会実装</h4></div>
-        <div class="rm-item future"><div class="rm-dot future">P3</div><h4>モデル化</h4></div>
-        <div class="rm-item future"><div class="rm-dot future">P4</div><h4>波及展開</h4></div>
+        <div class="rm-item active">
+          <div class="rm-dot active">P1</div>
+          <h4>証明（Proof）<span class="now-tag">← 現在</span></h4>
+          <p>コンセプト策定・モデル構築 — AI制作技術の選定・検証</p>
+        </div>
+        <div class="rm-item future">
+          <div class="rm-dot future">P2</div>
+          <h4>社会実装（Implementation）</h4>
+          <p>5分パイロット版制作 — 技術を使った実制作</p>
+        </div>
+        <div class="rm-item future">
+          <div class="rm-dot future">P3</div>
+          <h4>モデル化（Modeling）</h4>
+          <p>成功体験のパッケージ化 — 制作手法의 ドキュメント化</p>
+        </div>
+        <div class="rm-item future">
+          <div class="rm-dot future">P4</div>
+          <h4>波及展開（Expansion）</h4>
+          <p>他地域への水平展開 — 技術の汎用化・テンプレ化</p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- ===== 連携 ===== -->
+  <section class="section">
+    <div class="section-inner fade-up">
+      <div class="chalk-divider">─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
+      <span class="section-tag">🔗 連携</span>
+      <h2>他ワークスペースとの連携</h2>
+
+      <div class="link-boxes">
+        <div class="link-box">
+          <div class="arrow">→</div>
+          <div>
+            <h4>会話B（Campfire クラファン）</h4>
+            <p>技術成果をクラファンのプロモーション素材に活用</p>
+          </div>
+        </div>
+        <div class="link-box">
+          <div class="arrow">→</div>
+          <div>
+            <h4>会話C（福島町 地域連携）</h4>
+            <p>福島町との連携において技術力をアピール</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== フッター ===== -->
   <footer class="footer">
+    <div class="footer-line">─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─</div>
     <p class="brand">うっちゃり</p>
     <p>AI地域IP創造モデル：文明プロトタイプ</p>
+    <p style="margin-top: 0.5rem;">北海道福島町から始まる、新しい地域のレシピ。</p>
+    <div style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+      <a href="https://bestman4649.github.io/ucchari-portal/"
+        style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🏠 ポータル</a>
+      <a href="https://bestman4649.github.io/ucchari-crowdfunding/"
+        style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🔥
+        クラファン</a>
+      <a href="https://bestman4649.github.io/ucchari-fukushima-collab/"
+        style="color: var(--chalk-faded); text-decoration: none; font-size: 0.8rem; transition: color 0.3s;">🤝
+        福島町連携</a>
+    </div>
+    <div class="deco-stars" style="margin-top: 1rem;">✦ ✦ ✦</div>
   </footer>
 
   <script>
+    // スクロールフェードイン
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) e.target.classList.add('visible');
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
-  </script> 
+  </script>
 
-</body></html>
+</body>
+
+  </html>
